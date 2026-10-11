@@ -11,6 +11,8 @@
 - **乘法** (`multiply`) - 两个数相乘
 - **除法** (`divide`) - 两个数相除（包含除零检查）
 - **幂运算** (`power`) - 计算a的b次方
+- **模运算** (`modulo`) - 计算两个数相除的余数（包含除零检查）
+- **平方根** (`sqrt`) - 计算一个数的平方根（包含负数检查）
 
 ## 项目结构
 
@@ -26,7 +28,7 @@
 ### 导入模块
 
 ```python
-from calculator import add, subtract, multiply, divide, power
+from calculator import add, subtract, multiply, divide, power, modulo, sqrt
 
 # 使用示例
 result = add(10, 5)        # 15
@@ -34,6 +36,8 @@ result = subtract(10, 5)   # 5
 result = multiply(10, 5)   # 50
 result = divide(10, 5)     # 2.0
 result = power(2, 3)       # 8
+result = modulo(10, 3)     # 1
+result = sqrt(16)          # 4.0
 ```
 
 ## 运行测试
@@ -41,7 +45,7 @@ result = power(2, 3)       # 8
 确保你已经安装了Python 3，然后在项目目录下运行：
 
 ```bash
-python test_calculator.py
+python3 test_calculator.py
 ```
 
 或者使用pytest（如果已安装）：
@@ -63,7 +67,7 @@ pytest test_calculator.py -v
 ## 环境要求
 
 - Python 3.6 或更高版本
-- 无需额外依赖包（使用标准库unittest）
+- 标准库依赖：`unittest`（测试）、`math`（平方根运算）
 
 ## 许可证
 
